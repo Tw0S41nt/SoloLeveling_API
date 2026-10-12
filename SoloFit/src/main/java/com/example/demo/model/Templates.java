@@ -3,6 +3,9 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Data
 @Table(name = "templates")
@@ -17,4 +20,12 @@ public class Templates {
     @JoinColumn(name = "user_id", nullable = false)
     @ManyToOne
     User user;
+
+    @ManyToMany
+    @JoinTable(
+            name = "template_exercise",
+            joinColumns = @JoinColumn(name = "template_id"),
+            inverseJoinColumns = @JoinColumn(name = "exercise_id")
+    )
+    private Set<Exercises> studentCourses = new HashSet<>();
 }
