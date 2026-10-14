@@ -11,7 +11,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private int userId;
+    private Integer userId;
 
     @Column(name = "name", nullable = false, length = 50)
     private String name;
@@ -20,29 +20,29 @@ public class User {
     private String goal;
 
     @Column(name = "chest", columnDefinition = "TINYINT")
-    private int chest;
+    private Integer chest;
 
     @Column(name = "biceps", columnDefinition = "TINYINT")
-    private int biceps;
+    private Integer biceps;
 
     @Column(name = "traps", columnDefinition = "TINYINT")
-    private int traps;
+    private Integer traps;
 
     @Column(name = "delts", columnDefinition = "TINYINT")
-    private int delts;
+    private Integer delts;
 
     @Column(name = "back", columnDefinition = "TINYINT")
-    private int back;
+    private Integer back;
 
     @Column(name = "quads", columnDefinition = "TINYINT")
-    private int quads;
+    private Integer quads;
 
     @Column(name = "glutes", columnDefinition = "TINYINT")
-    private int glutes;
+    private Integer glutes;
 
     @Column(name = "calves", columnDefinition = "TINYINT")
-    private int calves;
+    private Integer calves;
 
     @Column(name = "hamstrings", columnDefinition = "TINYINT")
-    private int hamstrings;
+    private Integer hamstrings;
 }
