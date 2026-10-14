@@ -4,6 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.model.User;
 
-public interface  userRepository extends JpaRepository<User, Integer> { 
-    
+import java.util.List;
+import java.util.Optional;
+
+public interface  userRepository extends JpaRepository<User, Integer> {
+    List<User> findByNameContainingIgnoreCase(String name);
 }
