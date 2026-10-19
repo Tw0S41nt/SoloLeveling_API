@@ -1,11 +1,9 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.userDto;
-import com.example.demo.mapper.userDtoMapper;
-import com.example.demo.model.User;
-import com.example.demo.service.userService;
+import com.example.demo.dto.UserDto;
+import com.example.demo.mapper.UserDtoMapper;
+import com.example.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -16,25 +14,25 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "user", produces = MediaType.APPLICATION_JSON_VALUE)
-public class userController {
+public class UserController {
 
-    private final userDtoMapper userDtoMapper;
-    private final userService userService;
+    private final UserDtoMapper userDtoMapper;
+    private final UserService userService;
 
     @GetMapping
-    ResponseEntity<List<userDto>> getAllUsers(){
+    ResponseEntity<List<UserDto>> getAllUsers(){
         return new ResponseEntity<>(
                 userDtoMapper.toDtoList(userService.getAllUsers()), HttpStatus.OK);
     }
 
     @GetMapping(path = "{id}")
-    public ResponseEntity<userDto> getUserById(@PathVariable int id) {
+    public ResponseEntity<UserDto> getUserById(@PathVariable int id) {
         return new ResponseEntity<>(
                 userDtoMapper.toDto(userService.findById(id)), HttpStatus.OK);
     }
 
     @GetMapping(path = "search")
-    public ResponseEntity<List<userDto>> searchUsersByName(@RequestParam String name) {
+    public ResponseEntity<List<UserDto>> searchUsersByName(@RequestParam String name) {
         return new ResponseEntity<>(
                 userDtoMapper.toDtoList(userService.findByName(name)), HttpStatus.OK);
     }

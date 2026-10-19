@@ -5,7 +5,7 @@ import lombok.Value;
 
 @Data 
 @Value 
-public class userDto {
+public class UserDto {
     private int userId;
     private String name;
     private String goal;

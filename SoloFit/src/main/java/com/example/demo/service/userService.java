@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.User;
-import com.example.demo.repository.userRepository;
+import com.example.demo.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,8 +10,8 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class userService {
-    private final userRepository userRepository;
+public class UserService {
+    private final UserRepository userRepository;
 
     public List<User> getAllUsers(){
         return userRepository.findAll();
