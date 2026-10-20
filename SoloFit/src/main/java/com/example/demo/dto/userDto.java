@@ -3,8 +3,8 @@ package com.example.demo.dto;
 import lombok.Data;
 import lombok.Value;
 
-@Data 
-@Value 
+@Data
+@Value
 public class UserDto {
     private int userId;
     private String name;

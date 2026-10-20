@@ -29,14 +29,14 @@ public class Exercises {
     @Column(nullable = false, length = 1000)
     String description;
 
-    @Column(name = "image",length = 255)
+    @Column(name = "image", length = 255)
     String image;
 
     @Column(name = "video", length = 255)
     String video;
 
     @Column(name = "body_part", length = 20)
-    String bodyPart;   //upper or lower body for filter
+    String bodyPart; // upper or lower body for filter
 
     @Column(name = "primary_muscle", length = 20)
     String primaryMuscle;
@@ -45,9 +45,6 @@ public class Exercises {
     String secondaryMuscle;
 
     @ManyToMany
-    @JoinTable(name = "template_exercise",
-                joinColumns = @JoinColumn(name = "exercise_id"),
-                inverseJoinColumns = @JoinColumn(name = "template_id")
-    )
+    @JoinTable(name = "template_exercise", joinColumns = @JoinColumn(name = "exercise_id"), inverseJoinColumns = @JoinColumn(name = "template_id"))
     private Set<Templates> studentCourses = new HashSet<>();
 }
