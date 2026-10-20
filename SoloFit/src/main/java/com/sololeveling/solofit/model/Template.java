@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.sololeveling.solofit.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +22,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Table(name = "templates")
-public class Templates {
+public class Template {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,5 +47,5 @@ public class Templates {
       name = "template_exercises",
       joinColumns = @JoinColumn(name = "template_id"),
       inverseJoinColumns = @JoinColumn(name = "exercise_id"))
-  private Set<Exercises> exercises = new HashSet<>();
+  private Set<Exercise> exercises = new HashSet<>();
 }

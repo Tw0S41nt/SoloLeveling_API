@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.sololeveling.solofit.dto;
 
 import java.util.List;
 

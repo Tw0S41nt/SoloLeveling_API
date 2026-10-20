@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.sololeveling.solofit.controller;
 
-import com.example.demo.dto.TemplateDto;
-import com.example.demo.service.TemplateService;
+import com.sololeveling.solofit.dto.TemplateDto;
+import com.sololeveling.solofit.service.TemplateService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

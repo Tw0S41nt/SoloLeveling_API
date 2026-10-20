@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.sololeveling.solofit.service;
 
-import com.example.demo.dto.TemplateDto;
-import com.example.demo.mapper.TemplateMapper;
-import com.example.demo.repository.TemplateRepository;
+import com.sololeveling.solofit.dto.TemplateDto;
+import com.sololeveling.solofit.mapper.TemplateMapper;
+import com.sololeveling.solofit.repository.TemplateRepository;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -29,8 +29,8 @@ public class TemplateService {
     return repository
         .findById(id)
         .map(mapper::toDto)
-        .orElseThrow(() -> new ResponseStatusException(
-            HttpStatus.NOT_FOUND, "Template " + id + " not found"));
+        .orElseThrow(() ->
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "Template " + id + " not found"));
   }
 
   public List<TemplateDto> findByDayOfWeek(String dayOfWeek) {
