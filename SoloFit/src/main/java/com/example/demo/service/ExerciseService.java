@@ -17,7 +17,7 @@ public class ExerciseService {
     this.mapper = mapper;
   }
 
-  public List<ExerciseDto> findAll() {
+  public List<ExerciseDto> findAll() {  
     return repository.findAll().stream().map(mapper::toDto).toList();
   }
 

@@ -16,11 +16,11 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "exercises")
-public class Exercises {
+public class Exercise {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(nullable = false)
-  private int exercise_id;
+  @Column(name = "exercise_id", nullable = false)
+  private int exerciseId;
 
   @Column(nullable = false, length = 50)
   String name;
