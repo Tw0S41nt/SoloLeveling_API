@@ -17,7 +17,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "exercises")
-public class Exercises {
+public class Exercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
@@ -46,5 +46,5 @@ public class Exercises {
 
     @ManyToMany
     @JoinTable(name = "template_exercise", joinColumns = @JoinColumn(name = "exercise_id"), inverseJoinColumns = @JoinColumn(name = "template_id"))
-    private Set<Templates> studentCourses = new HashSet<>();
+    private Set<Template> studentCourses = new HashSet<>();
 }
