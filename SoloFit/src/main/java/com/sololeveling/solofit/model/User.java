@@ -1,11 +1,15 @@
 package com.sololeveling.solofit.model;
 
+<<<<<<< HEAD
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+=======
+import jakarta.persistence.*;
+>>>>>>> kamboj-homework-3
 import lombok.Data;
 
 @Entity
