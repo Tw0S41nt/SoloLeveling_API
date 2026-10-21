@@ -1,11 +1,11 @@
-package com.example.demo.service;
+package com.sololeveling.solofit.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.User;
-import com.example.demo.repository.UserRepository;
+import com.sololeveling.solofit.model.User;
+import com.sololeveling.solofit.repository.UserRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

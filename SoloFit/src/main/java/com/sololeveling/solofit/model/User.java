@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.sololeveling.solofit.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

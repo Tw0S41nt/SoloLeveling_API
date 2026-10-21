@@ -1,11 +1,11 @@
-package com.example.demo.mapper;
+package com.sololeveling.solofit.mapper;
 
 import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import com.example.demo.dto.UserDto;
-import com.example.demo.model.User;
+import com.sololeveling.solofit.dto.UserDto;
+import com.sololeveling.solofit.model.User;
 
 import jakarta.persistence.EntityNotFoundException;
 

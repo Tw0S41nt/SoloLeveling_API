@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.sololeveling.solofit.controller;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.dto.UserDto;
-import com.example.demo.mapper.UserDtoMapper;
-import com.example.demo.service.UserService;
+import com.sololeveling.solofit.dto.UserDto;
+import com.sololeveling.solofit.mapper.UserDtoMapper;
+import com.sololeveling.solofit.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
