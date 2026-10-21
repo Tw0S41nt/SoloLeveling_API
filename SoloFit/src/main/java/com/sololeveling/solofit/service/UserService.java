@@ -40,4 +40,10 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User addUser(String name, String goal){
+        User user = new User();
+        user.setName(name);
+        user.setGoal(goal);
+        return userRepository.save(user);
+    }
 }
