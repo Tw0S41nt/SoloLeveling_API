@@ -31,4 +31,19 @@ public class UserService {
         }
         return users;
     }
+
+    public User changeGoal(int id, String newGoal){
+        User user = userRepository.findById(id)
+            .orElseThrow(() -> new EntityNotFoundException("User (" + id + ") not found"));
+
+        user.setGoal(newGoal);
+        return userRepository.save(user);
+    }
+
+    public User addUser(String name, String goal){
+        User user = new User();
+        user.setName(name);
+        user.setGoal(goal);
+        return userRepository.save(user);
+    }
 }
