@@ -1,10 +1,11 @@
-package com.example.demo.service;
+package com.sololeveling.solofit.service;
 
-import com.example.demo.dto.ExerciseDto;
-import com.example.demo.mapper.ExerciseMapper;
-import com.example.demo.repository.ExerciseRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
+
+import com.sololeveling.solofit.dto.ExerciseDto;
+import com.sololeveling.solofit.mapper.ExerciseMapper;
+import com.sololeveling.solofit.repository.ExerciseRepository;
 
 @Service
 public class ExerciseService {

@@ -1,8 +1,9 @@
-package com.example.demo.mapper;
+package com.sololeveling.solofit.mapper;
 
-import com.example.demo.dto.ExerciseDto;
-import com.example.demo.model.Exercise;
 import org.springframework.stereotype.Component;
+
+import com.sololeveling.solofit.dto.ExerciseDto;
+import com.sololeveling.solofit.model.Exercise;
 
 @Component
 public class ExerciseMapper {

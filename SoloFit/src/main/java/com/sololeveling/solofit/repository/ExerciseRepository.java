@@ -1,8 +1,9 @@
-package com.example.demo.repository;
+package com.sololeveling.solofit.repository;
 
-import com.example.demo.model.Exercise;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.sololeveling.solofit.model.Exercise;
 
 public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
 
