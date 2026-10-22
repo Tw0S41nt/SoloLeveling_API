@@ -18,6 +18,9 @@ public class TemplateMapper {
         .toList();
 
     return new TemplateDto(
-        template.getTemplateId(), template.getDayOfWeek(), template.getUserId(), exercises);
+        template.getTemplateId(),
+        template.getDayOfWeek(),
+        template.getUser().getUserId(),
+        exercises);
   }
 }

@@ -1,8 +1,5 @@
 package com.sololeveling.solofit.model;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -14,6 +11,8 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.util.HashSet;
+import java.util.Set;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -37,10 +36,6 @@ public class Template {
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
   @JoinColumn(name = "user_id", nullable = false)
   private User user;
-
-  // Read-only copy of the FK so the user id can be returned without loading the User
-  @Column(name = "user_id", insertable = false, updatable = false)
-  private Integer userId;
 
   // Owning side of the template_exercises join table
   @ManyToMany
