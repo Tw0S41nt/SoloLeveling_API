@@ -1,0 +1,27 @@
+meta {
+  name: Create Template
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/templates
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dayOfWeek": "Thursday",
+    "userId": 2,
+    "exerciseIds": [2, 3]
+  }
+}
+
+assert {
+  res.status: eq 201
+}
+
+script:post-response {
+  bru.setVar("newTemplateId", res.body.templateId);
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Search Exercises By Name
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/exercises/search?name=press
+  body: none
+  auth: none
+}
+
+params:query {
+  name: press
+}
+
+assert {
+  res.status: eq 200
+}

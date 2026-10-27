@@ -1,0 +1,21 @@
+meta {
+  name: Change User Goal
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/user/{{newUserId}}/changeGoal
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "newGoal": "Hypertrophy"
+  }
+}
+
+assert {
+  res.status: eq 200
+}

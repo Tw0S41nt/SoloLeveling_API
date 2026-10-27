@@ -1,0 +1,19 @@
+meta {
+  name: Search Users By Name
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/user/search?name=alex
+  body: none
+  auth: none
+}
+
+params:query {
+  name: alex
+}
+
+assert {
+  res.status: eq 200
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Delete Template
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/templates/{{newTemplateId}}
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 204
+}

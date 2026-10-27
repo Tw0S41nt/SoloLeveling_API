@@ -6,6 +6,7 @@ import com.sololeveling.solofit.service.TemplateService;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,5 +57,12 @@ public class TemplateController {
   public TemplateDto updateTemplate(
       @PathVariable Integer id, @Valid @RequestBody TemplateRequest request) {
     return service.update(id, request);
+  }
+
+  // DELETE /api/templates/{id}
+  @DeleteMapping("/{id}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void deleteTemplate(@PathVariable Integer id) {
+    service.delete(id);
   }
 }

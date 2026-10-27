@@ -1,0 +1,26 @@
+meta {
+  name: Create User
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/user/add
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Sam Rivera",
+    "goal": "Strength"
+  }
+}
+
+assert {
+  res.status: eq 201
+}
+
+script:post-response {
+  bru.setVar("newUserId", res.body.userId);
+}

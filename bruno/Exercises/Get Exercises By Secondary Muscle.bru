@@ -1,0 +1,19 @@
+meta {
+  name: Get Exercises By Secondary Muscle
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/exercises/secondaryMuscle?secondaryMuscle=Triceps
+  body: none
+  auth: none
+}
+
+params:query {
+  secondaryMuscle: Triceps
+}
+
+assert {
+  res.status: eq 200
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Update Template
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/templates/{{newTemplateId}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dayOfWeek": "Saturday",
+    "userId": 3,
+    "exerciseIds": [1, 2]
+  }
+}
+
+assert {
+  res.status: eq 200
+}

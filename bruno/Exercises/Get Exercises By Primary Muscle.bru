@@ -1,0 +1,19 @@
+meta {
+  name: Get Exercises By Primary Muscle
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/exercises/primaryMuscle?primaryMuscle=Chest
+  body: none
+  auth: none
+}
+
+params:query {
+  primaryMuscle: Chest
+}
+
+assert {
+  res.status: eq 200
+}

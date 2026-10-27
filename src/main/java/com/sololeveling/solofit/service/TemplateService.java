@@ -65,6 +65,12 @@ public class TemplateService {
     return mapper.toDto(repository.save(template));
   }
 
+  /** Deletes the template; its template_exercises rows go with it, the exercises stay. */
+  @Transactional
+  public void delete(Integer id) {
+    repository.delete(getTemplate(id));
+  }
+
   private Template getTemplate(Integer id) {
     return repository
         .findById(id)

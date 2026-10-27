@@ -1,0 +1,19 @@
+meta {
+  name: Search Templates By Day
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/templates/search?day=monday
+  body: none
+  auth: none
+}
+
+params:query {
+  day: monday
+}
+
+assert {
+  res.status: eq 200
+}
