@@ -1,11 +1,10 @@
 package com.sololeveling.solofit.service;
 
-import java.util.List;
-import org.springframework.stereotype.Service;
-
 import com.sololeveling.solofit.dto.ExerciseDto;
 import com.sololeveling.solofit.mapper.ExerciseMapper;
 import com.sololeveling.solofit.repository.ExerciseRepository;
+import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class ExerciseService {
@@ -18,7 +17,7 @@ public class ExerciseService {
     this.mapper = mapper;
   }
 
-  public List<ExerciseDto> findAll() {  
+  public List<ExerciseDto> findAll() {
     return repository.findAll().stream().map(mapper::toDto).toList();
   }
 

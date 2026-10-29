@@ -1,14 +1,13 @@
 package com.sololeveling.solofit.controller;
 
+import com.sololeveling.solofit.dto.ExerciseDto;
+import com.sololeveling.solofit.service.ExerciseService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.sololeveling.solofit.dto.ExerciseDto;
-import com.sololeveling.solofit.service.ExerciseService;
 
 @RestController
 @RequestMapping("/api/exercises")
