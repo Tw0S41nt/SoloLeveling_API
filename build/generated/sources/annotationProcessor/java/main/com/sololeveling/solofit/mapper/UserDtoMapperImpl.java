@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-10-29T14:31:57-0400",
-    comments = "version: 1.6.3, compiler: IncrementalProcessingEnvironment from gradle-java-compiler-worker-9.7.1.jar, environment: Java 17.0.20.1 (Eclipse Adoptium)"
+    date = "2026-10-29T14:36:30-0400",
+    comments = "version: 1.6.3, compiler: IncrementalProcessingEnvironment from gradle-java-compiler-worker-9.7.1.jar, environment: Java 17.0.20.1 (Ubuntu)"
 )
 @Component
 public class UserDtoMapperImpl implements UserDtoMapper {
