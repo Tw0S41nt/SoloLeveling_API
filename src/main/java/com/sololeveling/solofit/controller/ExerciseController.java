@@ -5,6 +5,9 @@ import com.sololeveling.solofit.service.ExerciseService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,5 +35,16 @@ public class ExerciseController {
   @GetMapping("/search")
   public List<ExerciseDto> searchExercises(@RequestParam String name) {
     return service.findByName(name);
+  }
+
+  @PostMapping
+  public ExerciseDto createExercise(@RequestBody ExerciseDto exerciseDto) {
+    return service.createExercise(exerciseDto);
+  }
+
+  @PutMapping("/{id}")
+  public ExerciseDto updateExercise(
+      @PathVariable Integer id, @RequestBody ExerciseDto exerciseDto) {
+    return service.updateExercise(id, exerciseDto);
   }
 }

@@ -18,4 +18,14 @@ public class ExerciseMapper {
         exercise.getPrimaryMuscle(),
         exercise.getSecondaryMuscle());
   }
+
+  public void updateEntity(ExerciseDto dto, Exercise exercise) {
+    exercise.setName(dto.name());
+    exercise.setDescription(dto.description());
+    exercise.setImage(dto.image());
+    exercise.setVideo(dto.video());
+    exercise.setBodyPart(dto.bodyPart());
+    exercise.setPrimaryMuscle(dto.primaryMuscle());
+    exercise.setSecondaryMuscle(dto.secondaryMuscle());
+  }
 }
