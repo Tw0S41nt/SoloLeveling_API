@@ -7,4 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface ExerciseRepository extends JpaRepository<Exercise, Integer> {
 
   List<Exercise> findByNameContainingIgnoreCase(String name);
+  List<Exercise> findByPrimaryMuscleContainingIgnoreCase(String primaryMuscle);
+  List<Exercise> findBySecondaryMuscleContainingIgnoreCase(String primaryMuscle);
 }

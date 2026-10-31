@@ -1,10 +1,12 @@
 package com.sololeveling.solofit.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.sololeveling.solofit.dto.ExerciseDto;
 import com.sololeveling.solofit.mapper.ExerciseMapper;
 import com.sololeveling.solofit.repository.ExerciseRepository;
-import java.util.List;
-import org.springframework.stereotype.Service;
 
 @Service
 public class ExerciseService {
@@ -33,5 +35,17 @@ public class ExerciseService {
     return repository.findByNameContainingIgnoreCase(name).stream()
         .map(mapper::toDto)
         .toList();
+  }
+
+  public List<ExerciseDto> getExerciseByPrimaryMuscle(String primaryMuscle){
+    return repository.findByPrimaryMuscleContainingIgnoreCase(primaryMuscle).stream()
+            .map((mapper::toDto))
+            .toList();
+  }
+
+  public List<ExerciseDto> getExerciseBySecondaryMuscle(String secondaryMuscle){
+    return repository.findBySecondaryMuscleContainingIgnoreCase(secondaryMuscle).stream()
+            .map((mapper::toDto))
+            .toList();
   }
 }
